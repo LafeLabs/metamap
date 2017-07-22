@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  }
+});</script>
+
+</head>
+<body>
+    <div id = "initwords">$\alpha$ 
+$\beta$ 
+$\gamma$
+$\delta$
+$\epsilon$
+$\zeta$
+$\eta$
+$\theta$
+$\iota$
+$\kappa$
+$\lambda$
+</div>
+
+<div class= "mask" id = "mask1"></div>
+<img src = "https://i.imgur.com/iwsJmlS.jpg" id = "backimage"></img>
+    <textarea id = "wordin"></textarea>
+    <div id = "main"></div>
+
+    <style id = "hovers"></style>
+
+<script>
+document.getElementById("wordin").value = document.getElementById("initwords").innerHTML;    
+
+
+main = document.getElementById("main");
+ndivs = 7;
+divindex = 0;
+divs = [];
+for(var index = 0;index < ndivs;index++){
+    divs.push(document.createElement("DIV"));
+    divs[index].id = "div" + index.toString();
+    main.appendChild(divs[index]);
+    var localsubdiv = document.createElement("DIV");
+    localsubdiv.className = "divsubdiv";
+    divs[index].appendChild(localsubdiv);
+}
+
+x0 = innerWidth/2;
+y0 = innerHeight/2;
+x = x0;
+y = y0;
+w = y0/2;
+h = w;
+theta0 = 0;
+theta = theta0;
+divindex = 0;
+unit  = w;
+side = unit;
+aspectratio = 1;
+divcolor = "blue";
+
+
+clicks = [
+function(){
+    unit *= Math.sqrt(2);
+    unit *= Math.sqrt(2);
+    theta0 +=3;
+    redraw();
+},function(){
+    unit /= Math.sqrt(2);
+    theta0 -=3;
+    redraw();
+},function(){
+    y0 += side;
+    redraw();
+},function(){
+    y0 -= side;
+    redraw();
+},function(){
+    x0 -= side;
+    redraw();
+},function(){
+    x0 += side;
+    redraw();
+}
+];
+for(var index = 0;index < clicks.length;index++){
+    divs[index+1].onclick = clicks[index];
+}
+
+    
+    x=x0;
+    y0=y0;
+    side = unit;
+    theta =theta0;
+
+redraw();
+function redraw(){
+    document.getElementById("hovers").innerHTML = "";
+
+    theta =theta0;
+    divcolor = "black";
+    x=x0;
+    y=y0;
+    side = unit;
+    drawdiv(1);
+    side /= Math.sqrt(2);
+    //theta += 45;
+    divcolor = "black";
+    drawdiv(2);
+    divcolor = "black";
+
+    y += side;
+    side /= 2;
+    y += side;
+    drawdiv(3);   
+    x=x0;
+    y=y0;
+    side = unit;
+    side /= Math.sqrt(2);
+    y -= side;
+    side /= 2;
+    y -= side;
+    drawdiv(4);   
+    x=x0;
+    y=y0;
+    side = unit;
+    side /= Math.sqrt(2);
+    x -= side;
+    side /= 2;
+    x -= side;
+    drawdiv(5);   
+    x=x0;
+    y=y0;
+    side = unit;
+    side /= Math.sqrt(2);
+    x += side;
+    side /= 2;
+    x += side;
+    drawdiv(6);   
+
+    divcolor = "green";
+    x=x0;
+    y=y0;
+    theta = theta0;
+    side = unit;
+    y -= side;
+    x -= side;
+
+    side /= 2;
+    y -= side;
+    x -= side;
+
+
+    drawdiv(0);   
+    importwords();
+
+    MathJax.Hub.Typeset(); //update mathjax
+
+}
+function importwords(){
+    wordsstring = document.getElementById("wordin").value;
+    wordarray = wordsstring.split("\n");
+    for(var index = 0;index < wordarray.length;index++){
+        if(index < ndivs){
+            divs[index].getElementsByClassName("divsubdiv")[0].innerHTML = wordarray[index];
+            divs[index].getElementsByClassName("divsubdiv")[0].style.fontSize = (0.5*side).toString() + "px";
+            divs[index].getElementsByClassName("divsubdiv")[0].style.position = "absolute";
+            divs[index].getElementsByClassName("divsubdiv")[0].style.top = (0.1*side).toString() + "px";
+            divs[index].getElementsByClassName("divsubdiv")[0].style.left = (0.1*side).toString() + "px";
+            divs[index].getElementsByClassName("divsubdiv")[0].style.color = "#00ff00";
+        }
+    }
+}
+
+function drawdiv(localdivindex){
+    localdiv = divs[localdivindex];
+    localdiv.style.width = aspectratio*side.toString() + "px";
+    localdiv.style.height = side.toString() + "px";
+    localdiv.style.top = (y - side/2).toString() + "px";
+    localdiv.style.left = (x - aspectratio*side/2).toString() + "px";
+    localdiv.style.transform = "rotate(" + theta.toString() + "deg)";
+    localdiv.style.padding = "50% 40%";
+    document.getElementById("hovers").innerHTML += "#div" + localdivindex.toString() + "{background-color:" + divcolor + ";}\n #div" + localdivindex.toString() + ":hover{background-color:green;} #div" + localdivindex.toString() + ":active{background-color:#FFFFB0;}";
+
+}
+</script>
+<style>
+html{
+    background-color:black;
+    text-align:center;
+    }
+div{
+    position:absolute;
+}
+#wordin{
+    position:absolute;
+    left:5px;
+    top:5px;
+    height:300px;
+}
+#initwords{
+    display:none;
+}
+.mask{
+    z-index:-1;
+    background-color:black;
+    position:absolute;
+}
+#mask1{
+    width:1200px;
+    height:500px;
+    top:0px;
+    left:0px;
+}
+#backimage{
+    position:absolute;
+    width:1000px;
+    top:100px;
+    left:100px;
+    z-index:-2;
+}
+body{
+    overflow:hidden;
+}
+</style>
+</body>
+</html>

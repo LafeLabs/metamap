@@ -373,8 +373,10 @@ function doTheThing(localCommand){
       thetaStep = Math.PI/2;
       scaleFactor = 2;
       ctx.lineWidth = 2;
-      ctx.strokeStyle="#00ff00";
-      ctx.fillStyle="#00ff00";
+  //    ctx.strokeStyle="#00ff00";
+      ctx.strokeStyle="red";
+    //  ctx.fillStyle="#00ff00";
+      ctx.fillStyle="red";
       currentWord = "";
     }
     if(localCommand == 0304){
@@ -853,6 +855,18 @@ function wm2glyph(wmin){
 <body>
 
 <!-- Image Layer: Z = -2 [hand-colored user drawn map goes here]-->
+<div id = "div0600">
+ <img src = "https://i.imgur.com/8aqAVGB.jpg" id = "backmap"></img>
+</div>
+<style id = "style0500">
+    html{
+        background-color:black;
+    }
+#backmap{
+    position:absolute;
+    z-index:-2;
+}
+</style>
 <!-- Mask Layer:  Z = -1 [mask out user map as needed for aesthetics and size here] -->
 <!-- Main Canvas Background Layer:  Z = 0 [map lives here] -->
 <div id = "div0602">
@@ -937,7 +951,6 @@ function wm2glyph(wmin){
 <style id = "style0502">
     #maincanvas{
         position:absolute;
-        background-color:black;
         top:0px;
         left:0px;
         z-index:0;
@@ -1075,33 +1088,121 @@ td{
             </td>
         </tr>
     </table>
+
+    <table id = "imgcontrol">
+        <tr>
+            <td>
+                left:
+            </td>
+            <td>
+                <input value = "107"></input> 
+            </td>
+            <td>
+                pixels 
+            </td>
+        </tr>
+        <tr>
+            <td>
+                top: 
+            </td>
+            <td>
+                <input value = "-154"></input> 
+            </td>
+            <td>
+                pixels 
+            </td>
+        </tr>
+        <tr>
+            <td>
+                width: 
+            </td>
+            <td>
+                <input></input> 
+            </td>
+            <td>
+                pixels 
+            </td>
+        </tr>
+        <tr>
+            <td>
+                theta: 
+            </td>
+            <td>
+                <input></input> 
+            </td>
+            <td>
+                degrees 
+            </td>
+        </tr>
+    </table>
 </div>
 <script id = "script0707">
     viewbuttons = document.getElementById("viewcontrol").getElementsByTagName("TD");
     viewbuttons[0].onclick = function(){
-        viewGlyph += "0331,"
+        viewGlyph += "0331,";
+        imgy0 += 4*side; 
+        IMG.style.top = imgy0.toString() + "px";
         redraw();
     }
     viewbuttons[1].onclick = function(){
-        viewGlyph += "0330,"
+        viewGlyph += "0330,";
+        imgy0 -= 4*side; 
+        IMG.style.top = imgy0.toString() + "px";
         redraw();
+
     }
     viewbuttons[2].onclick = function(){
-        viewGlyph += "0332,"
+        viewGlyph += "0332,";
+        imgx0 -= 4*side; 
+        IMG.style.left = imgx0.toString() + "px";
         redraw();
     }
     viewbuttons[3].onclick = function(){
-        viewGlyph += "0333,"
+        viewGlyph += "0333,";
+        imgx0 += 4*side; 
+        IMG.style.left = imgx0.toString() + "px";
         redraw();
     }
     viewbuttons[4].onclick = function(){
-        viewGlyph += "0336,"
+        viewGlyph += "0336,";
+        IMG.style.left = (imgx0*3).toString() + "px";
+        IMG.style.top = (0).toString() + "px";
+        imgwidth /= 2; 
+        IMG.style.width = imgwidth.toString() + "px";
         redraw();
     }
     viewbuttons[5].onclick = function(){
-        viewGlyph += "0337,"
+        viewGlyph += "0337,";
+        IMG.style.left = (imgx0*3).toString() + "px";
+        imgwidth *= 2; 
+        IMG.style.width = imgwidth.toString() + "px";
         redraw();
     }
+
+    IMG = document.getElementById("backmap");
+    imageinputs = document.getElementById("imgcontrol").getElementsByTagName("input");
+
+    imgx0 = 140;
+    imgy0 = -133;
+    imgwidth = 1124;
+    IMG.style.width = imgwidth.toString() + "px";
+    IMG.style.left = imgx0.toString() + "px";
+    IMG.style.top = imgy0.toString() + "px";
+
+    imageinputs[0].value = imgx0;
+    imageinputs[1].value = imgy0;
+    imageinputs[2].value = imgwidth;
+
+    imageinputs[0].onchange = function(){
+        IMG.style.left = this.value + "px";
+    }
+    imageinputs[1].onchange = function(){
+        IMG.style.top = this.value + "px";
+    }
+    imageinputs[2].onchange = function(){
+        IMG.style.width = this.value + "px";
+    }
+
 
 </script>
 <style id = "style0507">
@@ -1124,6 +1225,12 @@ td{
     }
     #viewcontrol td:active{
         background-color:#006000;
+    }
+    #imgcontrol{
+        color:#00ff00;
+        position:absolute;
+        left:10px;
+        bottom:140px;        
     }
 </style>
 

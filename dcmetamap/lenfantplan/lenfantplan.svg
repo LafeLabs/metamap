@@ -1,0 +1,77 @@
+<svg width="700" height="600" viewbox = "0 0 700 600"  xmlns="http://www.w3.org/2000/svg">
+
+<!--
+<json>
+{
+"shapes":[
+    "0220:0330,0334,0350,0334,0310,0337,0304,0201,0334,0201,0334,0201,0334,0201,0350,0335,0336,0331,0304,0313,",
+    "0221:0340,0304,0331,0336,0336,0336,0333,0326,0204,0330,0204,0330,0204,0330,0204,0330,0204,0330,0204,0330,0204,0332,0204,0332,0330,0201,0334,0201,0304,0201,0304,0304,0335,0201,0334,0201,0335,0201,0334,0201,0335,0201,0337,0337,0333,0331,0336,0336,0330,0333,0337,0337,0337,0320,",
+    "0222:0220,0221,0304,0336,0336,0336,0336,0336,0333,0331,0337,0200,0350,0334,0310,0337,0342,0336,0332,0335,0335,0337,0342,0336,0336,0330,0334,0304,0337,0313,0337,0337,0337,0337,",
+    "0223:0222,0333,0331,0337,0200,0335,0335,0336,0336,0336,0336,0342,0337,0337,0337,0333,0336,0336,0336,0342,0337,0337,0337,0333,0336,0336,0336,0342,0335,0342,0337,0337,0337,0333,0336,0336,0336,0342,0337,0337,0337,0333,0336,0336,0336,0342,0335,0337,0332,0336,0331,0332,0336,0330,0332,0337,061,060,060,0365,0337,0337,0331,0331,0336,0336,060,0365,0331,0331,0331,0331,0331,0331,0331,0331,055,061,060,060,0365,0337,0337,0337,0330,0330,0336,0333,0336,0336,0336,0330,0332,0337,0342,0337,0337,0337,0333,0336,0336,0336,0342,0337,0337,0337,0333,0336,0336,0336,0342,0330,0336,0332,0330,0337,061,063,060,0365,0337,0337,0337,0332,0332,0336,0336,0336,055,061,063,060,0365,0337,0337,0337,0331,0333,0336,0331,0336,0330,0336,0336,0330,0333,0337,0337,0337,0337,",
+    "0224:0223,0304,",
+    "0225:0326,0336,0336,0331,0333,0336,0331,0332,0335,0337,0201,0334,0201,0335,0201,0334,0201,0336,0201,0335,0201,0334,0304,0304,0304,0304,",
+    "0226:0223,0225,0304,",
+    "0227:0333,0331,0337,0200,0336,0332,0350,0335,0310,0337,0304,0200,0350,0334,0310,0336,0330,0304,0313,0331,0336,0326,0201,0336,0201,0334,0201,0335,0201,0337,0350,0334,0342,0335,0336,0304,0333,0337,0337,0336,0336,0331,0336,0331,0335,0337,0201,0201,0334,0201,0201,0350,0335,0342,0334,0304,0337,0332,0336,0331,0336,0330,0337,0337,0337,0304,0336,0336,0337,0337,0304,0304,0304,",
+    "0260:0223,0225,0304,0300,0331,0336,0336,0331,0332,0332,0336,063,070,056,070,071,0116,040,067,067,056,060,064,0127,0365,"
+],
+"glyph":"0223,0225,0304,0300,0331,0336,0336,0331,0332,0332,0336,063,070,056,070,071,0116,040,067,067,056,060,064,0127,0365,",
+"w":700,
+"h":600,
+"x0":350,
+"y0":300,
+"x0rel":-1.7088165337082521,
+"y0rel":-0.1847369225630543,
+"unit":194.87171000000015,
+"imgurl":"",
+"imgw":2,
+"imgleft":-1,
+"imgtop":-1
+}
+
+</json>
+-->
+    <line x1="350" y1="105" x2="155" y2="300" style="stroke:black;stroke-width:2" />
+    <line x1="155" y1="300" x2="350" y2="495" style="stroke:black;stroke-width:2" />
+    <line x1="350" y1="495" x2="545" y2="300" style="stroke:black;stroke-width:2" />
+    <line x1="545" y1="300" x2="350" y2="105" style="stroke:black;stroke-width:2" />
+<circle cx="350" cy = "300" r = "3" stroke = "black" stroke-width = "2" fill = "black" />
+	<path d = "M374 495 L374 471 L350 471 L350 495 L374 495 Z" stroke = "blue" stroke-width = "2" fill = "blue" />	<path d = "M374 471 L374 446 L350 446 L350 471 L374 471 Z" stroke = "blue" stroke-width = "2" fill = "blue" />	<path d = "M374 446 L374 422 L350 422 L350 446 L374 446 Z" stroke = "blue" stroke-width = "2" fill = "blue" />	<path d = "M374 422 L374 397 L350 397 L350 422 L374 422 Z" stroke = "blue" stroke-width = "2" fill = "blue" />	<path d = "M374 397 L374 373 L350 373 L350 397 L374 397 Z" stroke = "blue" stroke-width = "2" fill = "blue" />	<path d = "M374 373 L374 349 L350 349 L350 373 L374 373 Z" stroke = "blue" stroke-width = "2" fill = "blue" />	<path d = "M374 349 L374 324 L350 324 L350 349 L374 349 Z" stroke = "blue" stroke-width = "2" fill = "blue" />	<path d = "M350 349 L350 324 L326 324 L326 349 L350 349 Z" stroke = "blue" stroke-width = "2" fill = "blue" />    <line x1="326" y1="324" x2="326" y2="300" style="stroke:blue;stroke-width:2" />
+    <line x1="326" y1="300" x2="301" y2="300" style="stroke:blue;stroke-width:2" />
+    <line x1="301" y1="300" x2="277" y2="300" style="stroke:blue;stroke-width:2" />
+    <line x1="277" y1="300" x2="277" y2="276" style="stroke:blue;stroke-width:2" />
+    <line x1="277" y1="276" x2="253" y2="276" style="stroke:blue;stroke-width:2" />
+    <line x1="253" y1="276" x2="253" y2="251" style="stroke:blue;stroke-width:2" />
+    <line x1="253" y1="251" x2="228" y2="251" style="stroke:blue;stroke-width:2" />
+    <line x1="228" y1="251" x2="228" y2="227" style="stroke:blue;stroke-width:2" />
+    <line x1="356" y1="306" x2="356" y2="294" style="stroke:black;stroke-width:2" />
+    <line x1="356" y1="294" x2="344" y2="294" style="stroke:black;stroke-width:2" />
+    <line x1="344" y1="294" x2="344" y2="306" style="stroke:black;stroke-width:2" />
+    <line x1="344" y1="306" x2="356" y2="306" style="stroke:black;stroke-width:2" />
+    <line x1="356" y1="306" x2="344" y2="294" style="stroke:black;stroke-width:2" />
+    <line x1="344" y1="306" x2="356" y2="294" style="stroke:black;stroke-width:2" />
+    <line x1="545" y1="495" x2="545" y2="105" style="stroke:black;stroke-width:2" />
+    <line x1="545" y1="105" x2="155" y2="105" style="stroke:black;stroke-width:2" />
+    <line x1="155" y1="105" x2="155" y2="495" style="stroke:black;stroke-width:2" />
+    <line x1="155" y1="495" x2="545" y2="495" style="stroke:black;stroke-width:2" />
+    <line x1="545" y1="495" x2="545" y2="519" style="stroke:black;stroke-width:2" />
+    <line x1="350" y1="495" x2="350" y2="519" style="stroke:black;stroke-width:2" />
+    <line x1="155" y1="495" x2="155" y2="519" style="stroke:black;stroke-width:2" />
+    <line x1="155" y1="495" x2="131" y2="495" style="stroke:black;stroke-width:2" />
+    <line x1="155" y1="300" x2="131" y2="300" style="stroke:black;stroke-width:2" />
+    <line x1="155" y1="105" x2="131" y2="105" style="stroke:black;stroke-width:2" />
+    <text x="70" y = "117" fill = "black" font-size = "24.358963750000022px" font-family = "futura">100</text>
+    <text x="70" y = "312" fill = "black" font-size = "24.358963750000022px" font-family = "futura">0</text>
+    <text x="70" y = "507" fill = "black" font-size = "24.358963750000022px" font-family = "futura">-100</text>
+    <line x1="155" y1="105" x2="155" y2="81" style="stroke:black;stroke-width:2" />
+    <line x1="350" y1="105" x2="350" y2="81" style="stroke:black;stroke-width:2" />
+    <line x1="545" y1="105" x2="545" y2="81" style="stroke:black;stroke-width:2" />
+    <text x="533" y = "69" fill = "black" font-size = "24.358963750000022px" font-family = "futura">130</text>
+    <text x="143" y = "69" fill = "black" font-size = "24.358963750000022px" font-family = "futura">-130</text>
+    <line x1="374" y1="373" x2="423" y2="373" style="stroke:blue;stroke-width:2" />
+    <line x1="423" y1="373" x2="423" y2="324" style="stroke:blue;stroke-width:2" />
+    <line x1="423" y1="324" x2="472" y2="324" style="stroke:blue;stroke-width:2" />
+    <line x1="472" y1="324" x2="472" y2="276" style="stroke:blue;stroke-width:2" />
+    <line x1="472" y1="276" x2="472" y2="251" style="stroke:blue;stroke-width:2" />
+    <line x1="472" y1="251" x2="496" y2="251" style="stroke:blue;stroke-width:2" />
+    <text x="253" y = "544" fill = "black" font-size = "24.35896375000002px" font-family = "futura">38.89N 77.04W</text>
+</svg>
